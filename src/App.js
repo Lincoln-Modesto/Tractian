@@ -1,8 +1,16 @@
+import { ThemeProvider } from 'styled-components';
+import { Home } from './pages/Home';
 
+import GlobalStyle from './styles/GlobalStyle';
+import defaultTheme from './styles/theme/default';
 
 function App() {
   return (
-    <h1>Tractian</h1>
+
+      <ThemeProvider theme={defaultTheme}>
+        <GlobalStyle />
+        <Home/>
+      </ThemeProvider>
   );
 }
 
