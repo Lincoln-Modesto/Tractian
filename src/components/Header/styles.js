@@ -10,13 +10,13 @@ export const Header = styled.header`
   height: 600px;
   width: 100%;
   margin-bottom: 3rem;
-  padding: 2rem 2rem;
+  padding: 1.5rem 2rem;
 
-  display: flex;
+  display: block;
   align-items: flex-start;
   justify-content: center;
 
-  >div{
+  .nav{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -27,10 +27,60 @@ export const Header = styled.header`
 
       a{
         margin-right: 2rem;
-        color: ${({theme}) => theme.colors.secondary.main};
+        color: ${({ theme }) => theme.colors.secondary.main};
         font-size: 18px;
         font-weight: 700;
         cursor: pointer;
+        text-decoration: none;
+
+        :active{
+          border: none;
+        }
+
+        :hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .content{
+    margin-top: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .content-infos{
+      display: block;
+      width: 50%;
+
+      h1{
+        margin-bottom: 2rem;
+      }
+
+      h4{
+        margin-bottom: 2rem;
+      }
+
+      >div{
+        display: flex;
+
+        button:not(:first-child){
+          margin-left: 2rem;
+        }
+      }
+    }
+
+    .content-illustration{
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+
+      img{
+        height: 375px;
+        width: 390px;
+
       }
     }
   }
@@ -44,7 +94,7 @@ export const NavList = styled.ul`
   align-items: center;
 
   li{
-    color: ${({theme}) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.background};
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
@@ -59,8 +109,8 @@ export const NavList = styled.ul`
   }
 
   .logo{
-      height: 40px;
-      width: 250px;
+      height: 20px;
+      width: 160px;
       margin: 0 !important;
   }
 
