@@ -3,7 +3,12 @@ import styled from 'styled-components'
 export const Button = styled.button`
   width: ${({small}) => small ? '' : '150px'};
   height: 60px;
-  background-color: ${({theme}) => theme.colors.secondary.main};
+  
+  background-color: 
+  ${({blue, theme}) => blue 
+  ? `${theme.colors.primary.main}` 
+  : `${theme.colors.secondary.main}`};
+
   color: ${({theme}) => theme.colors.background};
   box-shadow: 0px 4px 4px 0px #00000040;
   padding: 15px 15px;

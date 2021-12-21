@@ -8,9 +8,12 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 3rem 0;
+  flex-direction: ${({reverse}) => reverse ? 'row-reverse' : 'row'};
 
-  >div{
-    margin-right: 6rem;
+  .content-main{
+    margin-right: ${({reverse}) => reverse ? '0' : '6rem'};
+    margin-left: ${({reverse}) => reverse ? '6rem' : '0'};;
 
     ul{
       list-style: none;
@@ -20,7 +23,7 @@ export const Content = styled.div`
         margin-top: 3rem;
         align-items: center;
 
-        div{
+        .check{
           padding: 0.5rem;
           margin-right: 1rem;
           border-radius: 5px;
@@ -31,8 +34,23 @@ export const Content = styled.div`
           align-items: center;
         }
 
-        a{
+        .number{
+          padding: 0.5rem 1rem;
+          margin-right: 1rem;
+          border-radius: 5px;
+          box-shadow: 0px 4px 4px 0px #00000040;
 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          font-weight: 700;
+          font-size: 18px;
+          color: ${({theme}) => theme.colors.background};
+          background-color: ${({theme}) => theme.colors.secondary.main};
+        }
+
+        a{
           img{
             margin-right: 1rem;
           }
@@ -50,17 +68,64 @@ export const Content = styled.div`
             border: none;
           }
         }
+
+        h5{
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        small{
+          font-size: 14px;
+          font-weight: 500;
+          color: ${({theme}) => theme.colors.gray[200]};
+
+            h6{
+              display: inline;
+              font-size: 14px;
+              font-weight: 700;
+              color: ${({theme}) => theme.colors.secondary.main};
+            }
+        }
       }
     }
   }
 
   .img-hero{
-    margin: 3rem 0;
+    margin: 0;
 
     img{
       width: 700px;
       height: 390px;
     }
 
+  }
+
+  .content-sensors{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    span{
+      margin-top: 1rem;
+      color: ${({theme}) => theme.colors.primary.main};
+      font-weight: 700;
+    }
+
+    >div{
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+  
+      button{
+        margin-right: 2rem;
+      }
+
+    }
+    
+  }
+
+  .section-3{
+    margin-top: -5rem;
   }
 `

@@ -11,6 +11,9 @@ export const SubtitleHeader = styled.h4`
 `
 
 export const Paragraph = styled.p`
-
+  color: ${({theme}) => theme.colors.gray[900]};
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
 `
 
