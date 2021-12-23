@@ -5,7 +5,7 @@ import { Paragraph, Subtitle } from "../components/Subtitle";
 import { Button } from "../components/Button";
 import { Card } from "../components/Card";
 import { Footer } from "../components/Footer";
-import { Nav, NavList} from '../components/Header/styles'
+import { Nav, NavList } from '../components/Header/styles'
 
 import check from '../assets/check.svg';
 import imgSection1 from '../assets/tractian.png';
@@ -22,37 +22,42 @@ import arrowRightVector from '../assets/vector.svg'
 import logo from '../assets/logo.png';
 import arrowDown from '../assets/arrow.svg';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
 export function Home() {
+
+  AOS.init();
 
   return (
     <>
       <Nav>
-       <div className='nav'>
-        <NavList>
-          <li>
-            <img className='logo' src={logo} alt='logo'/>
-          </li>
-          <li>
-            O produto
-            <img src={arrowDown} alt='arrow-down'/>
-          </li>
-          <li>
-            Sobre nós
-            <img src={arrowDown} alt='arrow-down'/>
-          </li>
-          <li>
-            Blog
-          </li>
-          <li>
-            Área do Cliente
-          </li>
-          <li></li>
-        </NavList>
-        <div className='content-buttons'>
-          <a href='http://#'>Login</a>
-          <Button small >Cadastre-se <img src={arrowRightVector} alt='arrow-right'/></Button>
+        <div className='nav'>
+          <NavList>
+            <li>
+              <img className='logo' src={logo} alt='logo' />
+            </li>
+            <li>
+              O produto
+              <img src={arrowDown} alt='arrow-down' />
+            </li>
+            <li>
+              Sobre nós
+              <img src={arrowDown} alt='arrow-down' />
+            </li>
+            <li>
+              Blog
+            </li>
+            <li>
+              Área do Cliente
+            </li>
+            <li></li>
+          </NavList>
+          <div className='content-buttons'>
+            <a href='http://#'>Login</a>
+            <Button small >Cadastre-se <img src={arrowRightVector} alt='arrow-right' /></Button>
+          </div>
         </div>
-      </div>
       </Nav>
 
       <Header />
@@ -89,7 +94,7 @@ export function Home() {
               </ul>
 
             </div>
-            <div className="img-hero">
+            <div className="img-hero" data-aos="fade-left">
               <img src={imgSection1} alt="sensors tractian" />
             </div>
           </Content>
@@ -98,7 +103,7 @@ export function Home() {
         <Container>
           <Title>Monitoramento online de ponta</Title>
           <Content>
-            <div className="content-main">
+            <div className="content-main" data-aos="fade-right">
               <img src={imgSection2} alt="sensors-tractian" />
             </div>
             <div>
@@ -124,20 +129,20 @@ export function Home() {
             color="orange"
             title={"Disponível para +100 tipos de máquinas"}
             paragraph={`Motores, Mancais, Compressores, 
-            Bombas, HVAC, Rolamentos, Ventiladores, Prensas, Turbinas e Rolamentos.`}/>
+            Bombas, HVAC, Rolamentos, Ventiladores, Prensas, Turbinas e Rolamentos.`} />
           <Card
             icon={cool}
             color="blue"
             title={"Visão Geral das Máquinas"}
             paragraph={`Laudos Técnicos, Últimos Insights, Ativos em Alerta, 
             Indicadores Gerais de Manutenção, Calendário de OS e muito mais.
-            `}/>
+            `} />
           <Card
             icon={trending}
             title={"Analytics e Insights Automáticos"}
             paragraph={` Horímetro, Status de Vibração, Curva de Temperatura e 
             Insights sobre Falhas Mecânicas e Anomalias. Com Alarmes via WhatsApp 
-            ou Email.`}/>
+            ou Email.`} />
         </ContainerBackgroundBlue>
 
         <Container>
@@ -176,7 +181,7 @@ export function Home() {
                 </li>
               </ul>
             </div>
-            <div className="content-sensors">
+            <div className="content-sensors" data-aos="fade-left">
               <img src={imgSection3} alt="sensors-tractian" />
               <span>Conheça nossos sensores:</span>
               <div>
@@ -207,7 +212,7 @@ export function Home() {
                   </div>
                   <div>
                     <h5>Automatize seus Planos e Ordens de Serviço</h5>
-                    <small>Organizar, planejar e sequenciar: O.S, checklists 
+                    <small>Organizar, planejar e sequenciar: O.S, checklists
                       e inspeções</small>
                   </div>
                 </li>
@@ -217,14 +222,16 @@ export function Home() {
                   </div>
                   <div>
                     <h5>Substitua o Excel por completo</h5>
-                    <small>A plataforma vai abrir as Ordens de serviços e distribui-las, 
-                      permitindo que toda a equipe de manutenção se preocupe apenas em 
+                    <small>A plataforma vai abrir as Ordens de serviços e distribui-las,
+                      permitindo que toda a equipe de manutenção se preocupe apenas em
                       executar suas atividades de rotina.</small>
                   </div>
                 </li>
               </ul>
             </div>
-            <img src={imgSection4} alt="sensors-tractian" />
+            <div data-aos="fade-right">
+              <img src={imgSection4} alt="sensors-tractian" />
+            </div>
           </Content>
         </Container>
 
@@ -233,7 +240,7 @@ export function Home() {
           <Content reverse>
             <div className="content-main">
               <Subtitle className="subtitle">Suas máquinas mais seguras.</Subtitle>
-              <br/>
+              <br />
               <Paragraph>
                 Nossa plataforma consegue oferecer o que há de mais avançado em
                 manutenção preditiva. Tenha acesso a toda a parte de analytics e
@@ -245,11 +252,13 @@ export function Home() {
               </Paragraph>
               <Button>Demonstração</Button>
             </div>
-            <img src={imgSection5} alt="sensors-tractian" className="img-section5" />
+            <div data-aos="fade-up">
+            <img src={imgSection5} alt="sensors-tractian" className="img-section5"/>
+            </div>
           </Content>
         </Container>
 
-        <Footer/>
+        <Footer />
       </main>
     </>
 
