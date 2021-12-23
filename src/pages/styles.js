@@ -55,7 +55,6 @@ export const Content = styled.div`
         }
 
         a{
-        
           display: flex;
           align-items: center;
           cursor: pointer;
@@ -67,6 +66,7 @@ export const Content = styled.div`
 
           :hover{
             text-decoration: underline;
+            color: ${({theme}) => theme.colors.secondary.main}
           }
 
           :active{
@@ -149,4 +149,5 @@ export const ContainerBackgroundBlue = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 `

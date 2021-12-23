@@ -16,38 +16,8 @@ export const Header = styled.header`
   align-items: flex-start;
   justify-content: center;
 
-  .nav{
-    width: 100%;
-    display: flex;
-    margin: 0 1rem;
-    justify-content: space-between;
-
-
-    .content-buttons{
-      display: flex;
-      align-items: center;
-
-      a{
-        margin-right: 2rem;
-        color: ${({ theme }) => theme.colors.secondary.main};
-        font-size: 18px;
-        font-weight: 700;
-        cursor: pointer;
-        text-decoration: none;
-
-        :active{
-          border: none;
-        }
-
-        :hover{
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-
   .content{
-    margin-top: 5.5rem;
+    margin-top: 8.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,9 +49,93 @@ export const Header = styled.header`
       justify-content: flex-end;
       width: 50%;
 
-      img{
+      
+      .illustration{
         height: 375px;
         width: 390px;
+        z-index: 11;
+      }
+
+      .e1{
+        position: relative;
+        left: 50rem;
+        top: -9rem;
+
+        animation: img 2s linear infinite;
+        z-index: 10;
+
+        @keyframes img {
+          to { transform: rotate(-360deg)}
+        }
+      }
+      .e2{
+        position: relative;
+        left: 46rem;
+        top: -7rem;
+
+        animation: img 6s linear infinite;
+        z-index: 10;
+
+        @keyframes img {
+          to { transform: rotate(360deg)}
+        }
+      }
+      .e3{
+        position: relative;
+        left: 35rem;
+        top: -3rem;
+        animation: img 2s linear infinite;
+        z-index: 10;
+
+        @keyframes img {
+          to { transform: rotate(-360deg)}
+        }
+      }
+      .e4{
+        position: relative;
+        left: 34rem;
+        top: -8rem;
+        animation: img 4s linear infinite;
+        z-index: 10;
+
+        @keyframes img {
+          to { transform: rotate(360deg)}
+        }
+      }
+      .e5{
+        position: relative;
+        left: 28rem;
+        top: 1rem;
+        animation: img 3s linear infinite;
+        z-index: 10;
+
+        @keyframes img {
+          to { transform: rotate(-360deg)}
+        }
+      }
+      .e6{
+        position: relative;
+        left: 25rem;
+        top: -6rem;
+
+        animation: img 2s linear infinite;
+        z-index: 10;
+
+        @keyframes img {
+          to { transform: rotate(360deg)}
+        }
+      }
+      .e7{
+        position: relative;
+        left: 24rem;
+        top: -10rem;
+
+        animation: img 5s linear infinite;
+        z-index: 10;
+
+        @keyframes img {
+          to { transform: rotate(-360deg)}
+        }
       }
     }
   }
@@ -115,4 +169,46 @@ export const NavList = styled.ul`
       margin: 0 !important;
   }
 
+`
+
+export const Nav = styled.nav`
+
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  z-index: 12;
+
+   .nav{
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    position: absolute;
+    width: 100vw;
+    background-image: url(${hero});
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .content-buttons{
+      display: flex;
+      align-items: center;
+
+      a{
+        margin-right: 2rem;
+        color: ${({ theme }) => theme.colors.secondary.main};
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        text-decoration: none;
+
+        :active{
+          border: none;
+        }
+
+        :hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 `

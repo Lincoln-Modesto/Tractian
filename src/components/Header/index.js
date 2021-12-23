@@ -1,44 +1,21 @@
-import { Header as Container, NavList } from './styles';
+import { Header as Container } from './styles';
 import { Button, LeakedButton } from '../Button';
 import { TitleHeader } from '../Title';
 import { SubtitleHeader } from '../Subtitle';
 
-import logo from '../../assets/logo.png';
-import arrowDown from '../../assets/arrow.svg';
 import baseIllustration from '../../assets/group.svg';
-import arrowRight from '../../assets/vector.svg'
+import engr1 from '../../assets/animate/engr1.svg';
+import engr2 from '../../assets/animate/engr2.svg';
+import engr3 from '../../assets/animate/engr3.svg';
+import engr4 from '../../assets/animate/engr4.svg';
+import engr5 from '../../assets/animate/engr5.svg';
+import engr6 from '../../assets/animate/engr6.svg';
+import engr7 from '../../assets/animate/engr7.svg';
 
 export function Header() {
   return (
-    <Container>
-
-      <div className='nav'>
-        <NavList>
-          <li>
-            <img className='logo' src={logo} alt='logo'/>
-          </li>
-          <li>
-            O produto
-            <img src={arrowDown} alt='arrow-down'/>
-          </li>
-          <li>
-            Sobre nós
-            <img src={arrowDown} alt='arrow-down'/>
-          </li>
-          <li>
-            Blog
-          </li>
-          <li>
-            Área do Cliente
-          </li>
-          <li></li>
-        </NavList>
-        <div className='content-buttons'>
-          <a href='http://#'>Login</a>
-          <Button small >Cadastre-se <img src={arrowRight} alt='arrow-right'/></Button>
-        </div>
-      </div>
-
+    <>
+      <Container>
       <div className='content'>
   
         <div className='content-infos'>
@@ -57,10 +34,20 @@ export function Header() {
         </div>
 
         <div className='content-illustration'>
-          <img src={baseIllustration} alt='illustration'/>
+          <img src={engr1} alt='engr' className='e1'/>
+          <img src={engr2} alt='engr'className='e2'/>
+          <img src={engr3} alt='engr' className='e3'/>
+          <img src={engr4} alt='engr'className='e4'/>
+          <img src={engr5} alt='engr'className='e5'/>
+          <img src={engr6} alt='engr'className='e6'/>
+          <img src={engr7} alt='engr'className='e7'/>
+          <img src={baseIllustration} alt='illustration' className='illustration'/>
         </div>
       </div>
 
     </Container>
+
+    </>
+  
   );
 }

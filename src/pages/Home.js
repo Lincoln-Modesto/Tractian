@@ -5,6 +5,7 @@ import { Paragraph, Subtitle } from "../components/Subtitle";
 import { Button } from "../components/Button";
 import { Card } from "../components/Card";
 import { Footer } from "../components/Footer";
+import { Nav, NavList} from '../components/Header/styles'
 
 import check from '../assets/check.svg';
 import imgSection1 from '../assets/tractian.png';
@@ -17,10 +18,43 @@ import arrowRight from '../assets/arrow-right.svg';
 import settings from '../assets/settings.svg';
 import cool from '../assets/cool-icon.svg';
 import trending from '../assets/trending-up.svg';
+import arrowRightVector from '../assets/vector.svg'
+import logo from '../assets/logo.png';
+import arrowDown from '../assets/arrow.svg';
 
 export function Home() {
+
   return (
     <>
+      <Nav>
+       <div className='nav'>
+        <NavList>
+          <li>
+            <img className='logo' src={logo} alt='logo'/>
+          </li>
+          <li>
+            O produto
+            <img src={arrowDown} alt='arrow-down'/>
+          </li>
+          <li>
+            Sobre nós
+            <img src={arrowDown} alt='arrow-down'/>
+          </li>
+          <li>
+            Blog
+          </li>
+          <li>
+            Área do Cliente
+          </li>
+          <li></li>
+        </NavList>
+        <div className='content-buttons'>
+          <a href='http://#'>Login</a>
+          <Button small >Cadastre-se <img src={arrowRightVector} alt='arrow-right'/></Button>
+        </div>
+      </div>
+      </Nav>
+
       <Header />
       <main>
         <Container>
@@ -163,8 +197,8 @@ export function Home() {
                     <span>1</span>
                   </div>
                   <div>
-                    <h5>Nós te enviamos os sensores</h5>
-                    <small>Via correios</small>
+                    <h5>Nos envie sua lista Ativos, Locais e Usuários</h5>
+                    <small>Deixaremos tudo pronto para você</small>
                   </div>
                 </li>
                 <li>
@@ -172,8 +206,9 @@ export function Home() {
                     <span>2</span>
                   </div>
                   <div>
-                    <h5>Cole em suas máquinas</h5>
-                    <small>isso mesmo, igual um <h6>Bandaid</h6>!</small>
+                    <h5>Automatize seus Planos e Ordens de Serviço</h5>
+                    <small>Organizar, planejar e sequenciar: O.S, checklists 
+                      e inspeções</small>
                   </div>
                 </li>
                 <li>
@@ -181,10 +216,10 @@ export function Home() {
                     <span>3</span>
                   </div>
                   <div>
-                    <h5>Receba insights valiosos</h5>
-                    <small>Pronto, isso é tudo para começar a receber dados de
-                      vibração, temperatura e análises sobre a
-                      saúde do equipamento.</small>
+                    <h5>Substitua o Excel por completo</h5>
+                    <small>A plataforma vai abrir as Ordens de serviços e distribui-las, 
+                      permitindo que toda a equipe de manutenção se preocupe apenas em 
+                      executar suas atividades de rotina.</small>
                   </div>
                 </li>
               </ul>

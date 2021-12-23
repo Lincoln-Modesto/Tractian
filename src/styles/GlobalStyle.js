@@ -7,6 +7,9 @@ export default createGlobalStyle`
         font-family: 'Poppins', sans-serif;
         box-sizing: border-box;
     }
+    html{
+        scroll-behavior: smooth;
+    }
     body{
         font-size: 16px;
         background-color: ${({ theme }) => theme.colors.background};

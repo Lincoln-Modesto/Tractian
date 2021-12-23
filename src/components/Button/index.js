@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Button = styled.button`
   width: ${({small}) => small ? '' : '150px'};
-  height: 60px;
+  height: ${({small}) => small ? '50px' : '60px'};
   
   background-color: 
   ${({blue, theme}) => blue 

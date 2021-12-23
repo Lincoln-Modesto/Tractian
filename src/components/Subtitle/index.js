@@ -18,3 +18,10 @@ export const Paragraph = styled.p`
   line-height: 22px;
 `
 
+export const SubtitleFooter = styled.h4`
+  color: ${({theme}) => theme.colors.primary.lighter};
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+`
+
