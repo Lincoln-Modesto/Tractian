@@ -19,7 +19,9 @@ export const Header = styled.header`
   .nav{
     width: 100%;
     display: flex;
+    margin: 0 1rem;
     justify-content: space-between;
+
 
     .content-buttons{
       display: flex;
@@ -80,7 +82,6 @@ export const Header = styled.header`
       img{
         height: 375px;
         width: 390px;
-
       }
     }
   }

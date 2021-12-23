@@ -15,6 +15,10 @@ export const Content = styled.div`
     margin-right: ${({reverse}) => reverse ? '0' : '6rem'};
     margin-left: ${({reverse}) => reverse ? '6rem' : '0'};;
 
+    button{
+      margin-top: 2rem;
+    }
+
     ul{
       list-style: none;
 
@@ -51,14 +55,15 @@ export const Content = styled.div`
         }
 
         a{
+        
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          text-decoration: none;
+
           img{
             margin-right: 1rem;
           }
-
-          color: ${({theme}) => theme.colors.secondary.main};
-          font-weight: 700;
-          cursor: pointer;
-          text-decoration: none;
 
           :hover{
             text-decoration: underline;
@@ -128,4 +133,20 @@ export const Content = styled.div`
   .section-3{
     margin-top: -5rem;
   }
+
+  .img-section5{
+    width: 500px;
+    height: 300px;
+  }
+
+`
+
+export const ContainerBackgroundBlue = styled.section`
+  height: 600px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(34, 83, 198, 0.95) 0%, rgba(32, 172, 233, 0.8265) 100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `

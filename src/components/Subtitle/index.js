@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const Subtitle = styled.h4`
-
+  color: ${({theme}) => theme.colors.secondary.main};
+  font-weight: 700;
 `
 
 export const SubtitleHeader = styled.h4`
