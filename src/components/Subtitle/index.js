@@ -16,6 +16,7 @@ export const Paragraph = styled.p`
   font-weight: 300;
   font-size: 14px;
   line-height: 22px;
+  max-width: 600px;
 `
 
 export const SubtitleFooter = styled.h4`

@@ -17,7 +17,7 @@ export const Content = styled.div`
   >div{
     flex-wrap: wrap;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     h4{
       margin-bottom: 1rem;
@@ -59,7 +59,7 @@ export const Content = styled.div`
   .content-icons{
     flex-wrap: wrap;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 2rem;
 
     .invests{

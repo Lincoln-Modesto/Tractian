@@ -27,6 +27,10 @@ export const Content = styled.div`
         margin-top: 3rem;
         align-items: center;
 
+        div{
+          max-width: 350px;
+        }
+
         .check{
           padding: 0.5rem;
           margin-right: 1rem;
