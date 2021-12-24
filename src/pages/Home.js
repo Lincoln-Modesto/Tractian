@@ -23,7 +23,6 @@ import logo from '../assets/logo.png';
 import arrowDown from '../assets/arrow.svg';
 
 import AOS from 'aos';
-import 'aos/dist/aos.css'
 
 export function Home() {
 
@@ -32,30 +31,32 @@ export function Home() {
   return (
     <>
       <Nav>
-        <div className='nav'>
-          <NavList>
-            <li>
-              <img className='logo' src={logo} alt='logo' />
-            </li>
-            <li>
-              O produto
-              <img src={arrowDown} alt='arrow-down' />
-            </li>
-            <li>
-              Sobre nós
-              <img src={arrowDown} alt='arrow-down' />
-            </li>
-            <li>
-              Blog
-            </li>
-            <li>
-              Área do Cliente
-            </li>
-            <li></li>
-          </NavList>
-          <div className='content-buttons'>
-            <a href='http://#'>Login</a>
-            <Button small >Cadastre-se <img src={arrowRightVector} alt='arrow-right' /></Button>
+        <div>
+          <div className='nav'>
+            <NavList>
+              <li>
+                <img className='logo' src={logo} alt='logo' />
+              </li>
+              <li>
+                O produto
+                <img src={arrowDown} alt='arrow-down' />
+              </li>
+              <li>
+                Sobre nós
+                <img src={arrowDown} alt='arrow-down' />
+              </li>
+              <li>
+                Blog
+              </li>
+              <li>
+                Área do Cliente
+              </li>
+              <li></li>
+            </NavList>
+            <div className='content-buttons'>
+              <a href='http://#'>Login</a>
+              <Button small >Cadastre-se <img src={arrowRightVector} alt='arrow-right' /></Button>
+            </div>
           </div>
         </div>
       </Nav>
@@ -95,7 +96,9 @@ export function Home() {
 
             </div>
             <div className="img-hero" data-aos="fade-left">
-              <img src={imgSection1} alt="sensors tractian" />
+              <img
+                src={imgSection1}
+                alt="sensors tractian"/>
             </div>
           </Content>
         </Container>
@@ -103,7 +106,7 @@ export function Home() {
         <Container>
           <Title>Monitoramento online de ponta</Title>
           <Content>
-            <div className="content-main" data-aos="fade-right">
+            <div className="content-main img-hero2" data-aos="fade-right">
               <img src={imgSection2} alt="sensors-tractian" />
             </div>
             <div>
@@ -229,7 +232,7 @@ export function Home() {
                 </li>
               </ul>
             </div>
-            <div data-aos="fade-right">
+            <div data-aos="fade-right" className="img-section4">
               <img src={imgSection4} alt="sensors-tractian" />
             </div>
           </Content>
@@ -253,7 +256,7 @@ export function Home() {
               <Button>Demonstração</Button>
             </div>
             <div data-aos="fade-up">
-            <img src={imgSection5} alt="sensors-tractian" className="img-section5"/>
+              <img src={imgSection5} alt="sensors-tractian" className="img-section5" />
             </div>
           </Content>
         </Container>

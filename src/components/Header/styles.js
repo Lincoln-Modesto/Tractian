@@ -172,12 +172,11 @@ export const NavList = styled.ul`
 `
 
 export const Nav = styled.nav`
-
-  position: sticky;
-  top: 0;
   display: flex;
   width: 100%;
-  z-index: 12;
+  z-index: 15;
+  position: sticky !important;
+  top: 0;
 
    .nav{
     display: flex;

@@ -105,8 +105,20 @@ export const Content = styled.div`
     img{
       width: 700px;
       height: 390px;
+
+      /* Large devices (desktops, less than 1200px)*/
+      @media (min-width: 992px) and (max-width: 1199.98px){
+        zoom: 0.8;
+      }
     }
 
+  }
+
+  .img-hero2{
+    /* Large devices (desktops, less than 1200px)*/
+    @media (min-width: 992px) and (max-width: 1199.98px){
+      zoom: 0.8;
+    }
   }
 
   .content-sensors{
@@ -131,6 +143,13 @@ export const Content = styled.div`
       }
 
     }
+
+    img{
+       /* Large devices (desktops, less than 1200px)*/
+       @media (min-width: 992px) and (max-width: 1199.98px){
+        zoom: 0.8;
+      }
+    }
     
   }
 
@@ -141,6 +160,20 @@ export const Content = styled.div`
   .img-section5{
     width: 500px;
     height: 300px;
+
+    /* Large devices (desktops, less than 1200px)*/
+    @media (min-width: 992px) and (max-width: 1199.98px){
+        zoom: 0.8;
+    }
+  }
+
+  .img-section4{
+    img{
+      /* Large devices (desktops, less than 1200px)*/
+      @media (min-width: 992px) and (max-width: 1199.98px){
+        zoom: 0.8;
+      }
+    }
   }
 
 `
