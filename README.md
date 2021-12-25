@@ -1,4 +1,4 @@
-# Tractian redesign
+# Tractian redesign - ReactJs
 
 Desafio técnico de redesign da landingpage da [Tractian](https://tractian.com)
 
