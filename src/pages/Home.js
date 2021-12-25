@@ -28,30 +28,47 @@ export function Home() {
 
   AOS.init();
 
+  function handleMobileButton(event) {
+
+    const nav = document.getElementById('nav-list');
+    nav.classList.toggle('active');
+
+    const active = nav.classList.contains('active')
+    event.currentTarget.setAttribute('aria-expanded', active);
+  }
+
   return (
     <>
       <Nav>
-        <div>
-          <div className='nav'>
+        <div className='nav'>
+          <img className='logo' src={logo} alt='logo' />
+          <div
+            aria-label="open menu"
+            aria-haspopup="true"
+            aria-controls="menu"
+            aria-expanded="false"
+            className="mobile-menu"
+            onClick={handleMobileButton}>
+            <div className="line-1"></div>
+            <div className="line-2"></div>
+            <div className="line-3"></div>
+          </div>
+          <div id="nav-list">
             <NavList>
-              <li>
-                <img className='logo' src={logo} alt='logo' />
-              </li>
-              <li>
+              <li className='item-list'>
                 O produto
                 <img src={arrowDown} alt='arrow-down' />
               </li>
-              <li>
+              <li className='item-list'>
                 Sobre nós
                 <img src={arrowDown} alt='arrow-down' />
               </li>
-              <li>
+              <li className='item-list'>
                 Blog
               </li>
-              <li>
+              <li className='item-list'>
                 Área do Cliente
               </li>
-              <li></li>
             </NavList>
             <div className='content-buttons'>
               <a href='http://#'>Login</a>
@@ -66,7 +83,7 @@ export function Home() {
         <Container>
           <Title>Manutenção preditiva sem complicação</Title>
           <Content>
-            <div className="content-main">
+            <div className="content-main section1">
               <ul>
                 <li>
                   <div className="check">
@@ -98,7 +115,7 @@ export function Home() {
             <div className="img-hero" data-aos="fade-left">
               <img
                 src={imgSection1}
-                alt="sensors tractian"/>
+                alt="sensors tractian" />
             </div>
           </Content>
         </Container>
@@ -150,7 +167,7 @@ export function Home() {
 
         <Container>
           <Title>Sensores de monitoramento</Title>
-          <Content>
+          <Content >
             <div className="section-3 content-main">
               <ul>
                 <li>

@@ -50,22 +50,22 @@ export function Footer() {
           </div>
         </div>
         <div className="content-icons">
-          <div>
+          <div className="invests">
             <SubtitleFooter>Investidos Por</SubtitleFooter>
-            <div className="invests">
+            <div>
               <img src={invest1} alt="invest"/>
               <img src={invest2} alt="invest"/>
             </div>
           </div>
-          <div>
+          <div className="awards">
             <SubtitleFooter>Reconhecimento</SubtitleFooter>
-            <div className="awards">
+            <div >
               <img src={award1} alt="award"/>
               <img src={award2} alt="award"/>
               <img src={award3} alt="award"/>
             </div>
           </div>
-          <div>
+          <div className="container-icons">
             <SubtitleFooter>Conecte-se com a Tractian</SubtitleFooter>
             <div className="icons">
               <img src={linkedin} alt="linkedin"/>

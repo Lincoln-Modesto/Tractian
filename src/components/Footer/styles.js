@@ -8,11 +8,14 @@ export const Container = styled.footer`
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (max-width: 991.98px){
+    height: auto;
+  }
 `
 
 export const Content = styled.div`
 
-  padding: 3rem 2rem;
+  padding: 1rem 2rem;
 
   >div{
     flex-wrap: wrap;
@@ -24,6 +27,7 @@ export const Content = styled.div`
     }
 
     div{
+      margin-top: 2rem;
 
       span{
         color: ${({theme}) => theme.colors.primary.lighter};
@@ -56,35 +60,50 @@ export const Content = styled.div`
     }
   }
 
-  .content-icons{
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2rem;
-
     .invests{
-      display: flex;
-      align-items: center;
+      margin-top: 2rem;
 
-      img{
-        width: 150px;
-        height: 40px;
-        margin-right: 1rem;
+      >div{
+        
+        display: flex;
+        align-items: center;
+
+        img{
+          width: 150px;
+          height: 40px;
+          margin-right: 1rem;
+
+          @media (min-width: 768px) and (max-width: 991.98px){
+            zoom: 0.85;
+          }
+        }
       }
     }
     
     .awards{
-      display: flex;
-      align-items: center;
+      margin-top: 2rem;
 
-      img{
-        width: 60px;
-        height: 60px;
-        margin-right: 1rem;
+      >div{
+        display: flex;
+        align-items: center;
+
+        img{
+          width: 60px;
+          height: 60px;
+          margin-right: 1rem;
+
+          @media (min-width: 768px) and (max-width: 991.98px){
+            width: 48px;
+            height: 48px;
+          }
+        }
       }
     }
 
-    .icons{
+    .container-icons{
+      margin-top: 2rem;
+      
+      .icons{
       display: flex;
       align-items: center;
       cursor: pointer;
@@ -93,8 +112,14 @@ export const Content = styled.div`
         width: 36px;
         height: 36px;
         margin-right: 1rem;
+
+        @media (min-width: 768px) and (max-width: 991.98px){
+          width: 24px;
+          height: 24px;
+        }
       }
     }
-  }
+    }
+
   
 `

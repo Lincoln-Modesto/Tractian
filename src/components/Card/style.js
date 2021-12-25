@@ -7,6 +7,10 @@ export const Container = styled.div`
   padding: 2rem;
   background-color: ${({theme}) => theme.colors.background};
 
+  @media (max-width: 991.98px){
+    margin: 2rem 0;
+  }
+
   margin: 0 1rem;
 
   span{
